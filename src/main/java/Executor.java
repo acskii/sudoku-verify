@@ -1,29 +1,6 @@
 //   Abdo -> works on start ,display and extractFirstNumber methods
 // & Andrew -> works on runTasks method :)
 
-
-// Andrew :)
-    /*
-        For context, this function is expecting a task list created using Callable interface and expects it to return
-        List<String>
-
-        Reason being in the requirements, it was requested to print out invalids for all rows, columns and blocks.
-        Meaning a task run may have multiple INVALIDS, therefore it will expect a possibility of multiple results.
-
-        e.g. of a task:
-        public class Task implements Callable<List<String>> {
-            public Task() { ... }
-
-            @Override
-            public List<String> call() {
-                // .. code here ..
-            }
-        }
-
-        Each task will be run by one thread.
-        If you have more tasks than threads, ExecutorService will queue tasks until a thread frees.
-    */
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

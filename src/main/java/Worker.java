@@ -17,12 +17,6 @@ public class Worker implements Callable<List<String>> {
         this.type = c=='R'? WorkerType.ROW:c=='C'? WorkerType.COLUMN : WorkerType.BOX;
         this.index = index;
     }
-
-
-    // Constructor for checking all sections of a type
-    public Worker(int[][] board, WorkerType type) {
-        this(board, -1,'C');
-    }
     
     @Override
     public List<String> call() {
@@ -124,7 +118,7 @@ public class Worker implements Callable<List<String>> {
             default:
                 sectionType = "UNKNOWN";
         }
-        
+
         // Format: "ROW 1, #1, [1, 2, 3, 4, 5, 6, 7, 8, 9]"
         return String.format("%s %d, #%d, %s", 
                             sectionType, 

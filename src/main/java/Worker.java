@@ -12,15 +12,16 @@ public class Worker implements Callable<List<String>> {
     }
     
     // Constructor for checking a specific section
-    public Worker(int[][] board, WorkerType type, int index) {
+    public Worker(int[][] board, int index, char c) {
         this.board = board;
-        this.type = type;
+        this.type = c=='R'? WorkerType.ROW:c=='C'? WorkerType.COLUMN : WorkerType.BOX;
         this.index = index;
     }
-    
+
+
     // Constructor for checking all sections of a type
     public Worker(int[][] board, WorkerType type) {
-        this(board, type, -1);
+        this(board, -1,'C');
     }
     
     @Override

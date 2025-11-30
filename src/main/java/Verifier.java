@@ -22,7 +22,7 @@ public class Verifier {
 
             if (board != null) {
                 // Call executor here:
-                // e.g. Executor.start(board, mode);
+                Executor.start(board, mode);
             }
         }
     }
